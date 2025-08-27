@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Management Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f7fa;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 18px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
+    .content {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 6px;
+      min-height: 150px;
+    }
+
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .user-table th, .user-table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Management</h2>
+
+  <!-- Tabs -->
+<div class="tabs">
+  <div class="tab active" data-type="all">All</div>
+  
+  <div class="tab" data-type="banned">Banned</div>
+  <div class="tab" data-type="verified">Verified Users</div>
+  <div class="tab" data-type="email-unverified">Email Unverified</div>
+  <div class="tab" data-type="phone-unverified">Phone Unverified</div>
+</div>
+
+
+  <!-- Data Container -->
+  <div class="content" id="userContent">
+    <div class="loading">Loading users...</div>
+  </div>
+
+<script src="js/admin-user.js"></script>
+</body>
+</html>

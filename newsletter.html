@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .panel {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .panel-header h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #009688;
+      background: #fff;
+      color: #009688;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #009688;
+      color: #fff;
+    }
+
+    .no-data {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #444;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="panel">
+    <div class="panel-header">
+      <h3>All Subscriber</h3>
+      <button class="btn" onclick="sendNewsletter()">
+        <i class="fa-solid fa-envelope"></i> Send newsletter to all subscriber
+      </button>
+    </div>
+    <div class="no-data">
+      No data found
+    </div>
+  </div>
+
+  <script>
+    function sendNewsletter() {
+      alert(" ⚠️No Subscriber found");
+    }
+  </script>
+
+</body>
+</html>

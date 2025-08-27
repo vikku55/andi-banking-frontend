@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Payment Gateway Management</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Payment Gateway Management</h1>
+  </header>
+
+  <main class="dashboard-container">
+    <section class="table-section">
+      <div class="section-header">
+        <h2>All Gateways</h2>
+        <button class="btn-primary">➕ Add New Gateway</button>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Gateway Name</th>
+            <th>Status</th>
+            <th>Min Limit</th>
+            <th>Max Limit</th>
+            <th>Charge (%)</th>
+            <th>QR Code</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paytm</td>
+            <td><span class="badge active">Active</span></td>
+            <td>₹100</td>
+            <td>₹10,000</td>
+            <td>1.5%</td>
+            <td><a href="#">View</a></td>
+            <td>
+              <button class="btn-edit">✏️</button>
+              <button class="btn-delete">🗑️</button>
+            </td>
+          </tr>
+          <tr>
+            <td>PhonePe</td>
+            <td><span class="badge inactive">Inactive</span></td>
+            <td>₹50</td>
+            <td>₹5,000</td>
+            <td>2%</td>
+            <td><a href="#">View</a></td>
+            <td>
+              <button class="btn-edit">✏️</button>
+              <button class="btn-delete">🗑️</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="js/check-auth-admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transactions | Admin Dashboard</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+    th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+    th { background: teal; color: #fff; }
+    .status-pending { color: orange; }
+    .status-completed { color: green; }
+    .status-failed { color: red; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Transactions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Bank</th>
+        <th>Amount</th>
+        <th>Charge</th>
+        <th>Account</th>
+        <th>TRX Time</th>
+        <th>Processing Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="transactionList">
+      <tr><td colspan="8">Loading...</td></tr>
+    </tbody>
+  </table>
+  
+  <script src="js/admin-transactions.js"></script>
+</body>
+</html>

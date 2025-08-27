@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>General Settings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"], input[type="color"], select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    /* Toggle buttons */
+    .toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 12px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+      user-select: none;
+    }
+
+    .toggle.on {
+      background: #27ae60;
+    }
+
+    .toggle.off {
+      background: #c0392b;
+    }
+
+    .branding {
+      grid-column: span 3;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background: #009688;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #00796b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2><i class="fa-solid fa-gear"></i> General Settings</h2>
+
+    <form>
+      <div class="form-grid">
+        <!-- Website Title -->
+        <div class="form-group">
+          <label>Website Title</label>
+          <input type="text" value="ANDi Banking">
+        </div>
+
+        <!-- Website Color -->
+        <div class="form-group">
+          <label>Website Color</label>
+          <input type="text" value="1672B7" style="background:#1672B7;color:white;text-align:center;">
+        </div>
+
+        <!-- Base Currency -->
+        <div class="form-group">
+          <label>Base Currency</label>
+          <select>
+            <option selected>INR</option>
+            <option>USD</option>
+            <option>EUR</option>
+          </select>
+        </div>
+
+        <!-- Currency Symbol -->
+        <div class="form-group">
+          <label>Currency Symbol</label>
+          <input type="text" value="₹">
+        </div>
+
+        <!-- Registration -->
+        <div class="form-group">
+          <label>Registration</label>
+          <div class="toggle on" onclick="toggleSwitch(this)">ON</div>
+        </div>
+
+        <!-- Email Notification -->
+        <div class="form-group">
+          <label>Email Notification</label>
+          <div class="toggle off" onclick="toggleSwitch(this)">OFF</div>
+        </div>
+
+        <!-- SMS Notification -->
+        <div class="form-group">
+          <label>SMS Notification</label>
+          <div class="toggle off" onclick="toggleSwitch(this)">OFF</div>
+        </div>
+
+        <!-- Email Verification -->
+        <div class="form-group">
+          <label>Email Verification</label>
+          <div class="toggle off" onclick="toggleSwitch(this)">OFF</div>
+        </div>
+
+        <!-- SMS Verification -->
+        <div class="form-group">
+          <label>SMS Verification</label>
+          <div class="toggle off" onclick="toggleSwitch(this)">OFF</div>
+        </div>
+
+        <!-- Branding -->
+        <div class="form-group branding">
+          <label>Branding</label>
+          <input type="text" value="ANDi Banking from ANDi Software Solutions @ 2021">
+        </div>
+      </div>
+
+      <button type="submit"><i class="fa-solid fa-save"></i> Update</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleSwitch(el) {
+      if (el.classList.contains("on")) {
+        el.classList.remove("on");
+        el.classList.add("off");
+        el.textContent = "OFF";
+      } else {
+        el.classList.remove("off");
+        el.classList.add("on");
+        el.textContent = "ON";
+      }
+    }
+  </script>
+
+</body>
+</html>

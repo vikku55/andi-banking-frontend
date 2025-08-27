@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deposit</title>
+  <link rel="stylesheet" href="user-style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>User Panel</h2>
+    <ul>
+      <li class="active"><a href="user-dashboard.html">Dashboard</a></li>
+      <li><a href="deposit.html">E-DEPOSIT</a></li>
+      <li><a href="withdraw.html">E-WITHDRAW</a></li>
+      <li><a href="user-branches.html">OUR BRANCH</a></li>
+      <li><a href="admin-transactions.html">ACCOUNT-STATEMENT</a></li>
+      <li><a href="kyc.html">KYC</a></li>
+      <li><a href="logout1.html">LOGOUT</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content" style="margin-left: 40%;">
+    <header>
+      <h1>Make a Deposit</h1>
+    </header>
+
+    <section class="form-section">
+      <form id="depositForm">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter deposit amount" required>
+
+        <label for="user_id">User Id</label>
+        <input type="number" id="user_id" placeholder="Enter Your user ID">
+
+        <label for="method">Payment Method</label>
+        <select id="method" required>
+          <option value="">Select Method</option>
+          <option value="bank">Bank Transfer</option>
+          <option value="upi">UPI</option>
+          <option value="card">Credit/Debit Card</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Submit Deposit</button>
+      </form>
+    </section>
+  </div>
+  <script src="js/deposit.js"></script>
+</body>
+</html>

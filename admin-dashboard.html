@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | ANDi Banking</title>
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>ANDi Banking</h2>
+    <ul>
+      <li class="active"><i class="fa fa-chart-line"></i> Dashboard</li>
+      <a href="branches.html">
+        <li><i class="fa fa-code-branch"></i> Branch</li>
+      </a>
+      <li><i class="fa fa-university"></i><a href="admin-otherBanks.html">Other Banks</a> </li>
+      <li><i class="fa fa-wallet"></i><a href="admin-deposits.html">Deposit</a></li>
+
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-btn"><i class="fa-solid fa-newspaper"></i> Latest News ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="admin-latestNews.html">➕ Add new</a></li>
+          <li><a href="admin-latestNews.html">📄 View all</a></li>
+        </ul>
+      </li>
+
+
+      <li><i class="fa fa-exchange-alt"></i> <a href="admin-transactions.html">Transactions</a></li>
+      <li><i class="fa fa-money-bill-transfer"></i> <a href="admin-withdrawal.html">Withdraw</a> </li>
+      <li><i class="fa fa-users"></i> <a href="adminUserManagement.html">User Management</a></li>
+
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown(this)">
+          <i class="fa-solid fa-gear"></i> Settings ▾
+        </a>
+        <ul class="dropdown-content">
+          <li>
+            <a href="general-settings.html">
+              <i class="fa-solid fa-sliders"></i> General Settings
+            </a>
+          </li>
+          <li>
+            <a href="charge-settings.html">
+              <i class="fa-solid fa-coins"></i> Charge Settings
+            </a>
+          </li>
+          <li>
+            <a href="email-settings.html">
+              <i class="fa-solid fa-envelope"></i> Email Settings
+            </a>
+          </li>
+          <li>
+            <a href="sms-settings.html">
+              <i class="fa-solid fa-comment-sms"></i> SMS API Settings
+            </a>
+          </li>
+          <li>
+            <a href="facebook-settings.html">
+              <i class="fa-brands fa-facebook"></i> Facebook API
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li><i class="fa-solid fa-unlock"></i><a href="admin-kyc.html">KYC</a></li>
+      <li><i class="fa fa-sliders-h"></i> Interface Control</li>
+      <li><i class="fa fa-envelope"></i> <a href="newsletter.html"> Newsletter</a></li>
+      <li><i class="fa fa-ad"></i> <a href="advertisement.html"> Advertisement</a></li>
+      <li><i class="fa fa-language"></i> Language</li>
+      <li><i class="fa fa-sign-out-alt"></i> <a href="logout1.html"> Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <h2>Admin Dashboard</h2>
+    </header>
+
+    <!-- User Statistics -->
+    <section class="stats-section">
+      <h3><i class="fa fa-users"></i> Users Statistics</h3>
+      <div class="cards">
+        <a href="adminUserManagement.html">
+          <div class="card teal" id="totalUsers"><i class="fa fa-user"></i> TOTAL USERS <span>1</span></div>
+        </a>
+        <div class="card red" id="bannedUsers"><i class="fa fa-user-slash"></i> TOTAL BANNED USERS <span>0</span></div>
+        <div class="card blue" id="emailUnvarified"><i class="fa fa-envelope"></i> EMAIL UNVERIFIED <span>0</span></div>
+        <div class="card teal" id="phoneUnvarified"><i class="fa fa-phone"></i> PHONE UNVERIFIED <span>0</span></div>
+      </div>
+    </section>
+
+    <!-- Finance Statistics -->
+    <section class="stats-section">
+      <h3><i class="fa fa-money-bill-wave"></i> Users Finance Statistics</h3>
+      <div class="cards">
+        <div class="card blue" id="depositWallet"><i class="fa fa-wallet"></i>TOTAL USERS DEPOSIT WALLET BALANCE <span>0
+            INR</span></div>
+        <div class="card green" id="interestWallet"><i class="fa fa-piggy-bank"></i> TOTAL USERS INTEREST WALLET BALANCE
+          <span>0 INR</span></div>
+      </div>
+    </section>
+
+    <!-- Deposit Statistics -->
+    <section class="stats-section">
+      <h3><i class="fa fa-coins"></i> Deposit Statistics</h3>
+      <div class="cards">
+        <a href="admin-deposits.html">
+          <div class="card teal" id="depositCount"><i class="fa fa-list-ol"></i> NUMBER OF DEPOSITS <span>0</span></div>
+        </a>
+        <a href="admin-deposits.html">
+          <div class="card dark" id="depositAmount"><i class="fa fa-sack-dollar"></i> DEPOSITS AMOUNT <span>0 INR</span>
+          </div>
+        </a>
+        <a href="admin-deposits.html">
+          <div class="card green" id="depositCharges"><i class="fa fa-dollar-sign"></i> DEPOSITS CHARGE <span>0
+              INR</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Transaction Statistics -->
+    <section class="stats-section">
+      <h3><i class="fa fa-exchange-alt"></i> Other Bank Transaction Statistics</h3>
+      <div class="cards">
+        <div class="card teal" id="transactionCount"><i class="fa fa-list"></i> TOTAL TRANSACTIONS <span>0</span></div>
+        <div class="card green" id="transactionAmount"><i class="fa fa-check"></i> TRANSACTION AMOUNT <span>0</span>
+        </div>
+        <div class="card red" id="transactionCharges"><i class="fa fa-times"></i> TRANSACTION CHARGE <span>0</span>
+        </div>
+        <div class="card blue" id="transactionPending"><i class="fa fa-hourglass-half"></i> PENDING <span>0</span></div>
+        <div class="card dark" id="transactionApproved"><i class="fa fa-sack-dollar"></i>APPROVED <span>0 INR</span>
+        </div>
+        <div class="card green" id="transactionRejected"><i class="fa fa-dollar-sign"></i> REJECTED <span>0 INR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Withdraw Statistics -->
+    <section class="stats-section">
+      <h3><i class="fa fa-money-bill-transfer"></i> Withdraw Statistics</h3>
+      <div class="cards">
+        <a href="admin-withdrawal.html">
+          <div class="card teal" id="withdrawCount"><i class="fa fa-list-ol"></i> TOTAL WITHDRAWS <span>0</span></div>
+        </a>
+        <a href="admin-withdrawal.html">
+          <div class="card green" id="withdrawApproved"><i class="fa fa-check"></i> APPROVED <span>0</span></div>
+        </a>
+        <a href="admin-withdrawal.html">
+          <div class="card red" id="withdrawRejected"><i class="fa fa-times"></i> REJECTED <span>0</span></div>
+        </a>
+        <a href="admin-withdrawal.html">
+          <div class="card blue" id="withdrawPending"><i class="fa fa-hourglass-half"></i> PENDING <span>0</span></div>
+        </a>
+        <a href="admin-withdrawal.html">
+          <div class="card dark" id="withdrawAmount"><i class="fa fa-sack-dollar"></i> WITHDRAW AMOUNT <span>0
+              INR</span></div>
+        </a>
+        <div class="card green" id="withdrawCharges"><i class="fa fa-dollar-sign"></i> WITHDRAW CHARGE <span>0
+            INR</span></div>
+      </div>
+    </section>
+  </div>
+  <script src="js/admin-dashboard.js"></script>
+  <script src="js/check-auth-admin.js"></script>
+</body>
+
+</html>

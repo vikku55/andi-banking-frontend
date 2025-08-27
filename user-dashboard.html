@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="user-style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>User Panel</h2>
+    <ul>
+      <li class="active"><a href="user-dashboard.html">Dashboard</a></li>
+      <li><a href="deposit.html">E-DEPOSIT</a></li>
+      <li><a href="withdraw.html">E-WITHDRAW</a></li>
+      <li><a href="user-branches.html">OUR BRANCH</a></li>
+      <li><a href="admin-transactions.html">ACCOUNT-STATEMENT</a></li>
+      <li><a href="kyc.html">KYC</a></li>
+      <li><a href="logout1.html">LOGOUT</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Welcome, User</h1>
+    </header>
+
+    <section class="dashboard-widgets">
+      <div class="widget">
+        <h3>Current Balance </h3>
+        <p id="current-balance">12</p>
+      </div>
+      <div class="widget">
+        <h3>Total Deposited</h3>
+        <p id="total-deposited">3</p>
+      </div>
+      <div class="widget">
+        <h3>Pending Other Bank Transaction</h3>
+        <p id="pending-bank">7</p>
+      </div>
+      <div class="widget">
+        <h3>Total Withdrawal</h3>
+        <p id="total-withdrawal">5</p>
+      </div>
+       <div class="widget">
+        <h3> Withdrawal Pending</h3>
+        <p id="withdraw-pending">5</p>
+      </div>
+       <div class="widget">
+        <h3>Total Transaction</h3>
+        <p id="total-transactions">5</p>
+      </div>
+    </section>
+
+    <section class="quick-actions">
+      <h2>Quick Actions</h2>
+      <div class="action-buttons">
+        <a href="deposit.html" class="btn-primary">Make Deposit</a>
+        <a href="withdraw.html" class="btn-primary">Request Withdraw</a>
+      </div>
+    </section>
+  </div>
+  <p id="wallet-balance">₹0</p>
+<p id="interest-balance">₹0</p>
+
+<table id="recent-transactions">
+  <thead> ... </thead>
+  <tbody></tbody>
+</table>
+
+
+
+
+</body>
+<script src="js/check-auth-user.js"></script>
+<script src="js/dashboard.js"></script>
+
+</html>

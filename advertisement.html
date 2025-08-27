@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Ads Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #2c3e50;
+      min-height: 100vh;
+      color: #fff;
+      padding-top: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 12px 20px;
+      cursor: pointer;
+      position: relative;
+    }
+    .sidebar ul li:hover {
+      background: #34495e;
+    }
+    .sidebar ul li a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content {
+      display: none;
+      background: #34495e;
+      padding-left: 20px;
+    }
+    .dropdown-content li {
+      padding: 10px;
+    }
+    .dropdown-content li:hover {
+      background: #3b566e;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #2980b9;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3498db;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background: #2c3e50;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li class="dropdown">
+        <a href="javascript:void(0)" onclick="toggleDropdown(this)">
+          <i class="fa-solid fa-bullhorn"></i> Ads Management ▾
+        </a>
+        <ul class="dropdown-content">
+          <li><a href="javascript:void(0)" onclick="showSection('addNew')"><i class="fa fa-plus"></i> Add New</a></li>
+          <li><a href="javascript:void(0)" onclick="showSection('viewAll')"><i class="fa fa-list"></i> View All</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Add New Form -->
+    <div id="addNew" class="hidden">
+      <h2>Create Advertisement</h2>
+      <div class="form-group">
+        <label for="adType">Select Advertisement Type</label>
+        <select id="adType">
+          <option>Banner</option>
+          <option>Popup</option>
+          <option>Video</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="adSize">Select Advertisement Size</label>
+        <select id="adSize">
+          <option>300x250</option>
+          <option>728x90</option>
+          <option>160x600</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="url">Redirect URL</label>
+        <input type="url" id="url" value="http://thesoftking.com">
+      </div>
+      <div class="form-group">
+        <label for="banner">Upload Banner</label>
+        <input type="file" id="banner">
+      </div>
+      <button>Save Advertisement</button>
+    </div>
+
+    <!-- View All Table -->
+    <div id="viewAll" class="hidden">
+      <h2>All Advertisements</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Size</th>
+          <th>URL</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Banner</td>
+          <td>300x250</td>
+          <td>http://thesoftking.com</td>
+          <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Popup</td>
+          <td>728x90</td>
+          <td>http://example.com</td>
+          <td><button>Edit</button> <button>Delete</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+<script>
+  function toggleDropdown(el) {
+    let dropdown = el.nextElementSibling;
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  function showSection(id) {
+    document.querySelectorAll('.content > div').forEach(div => {
+      div.classList.add('hidden');
+    });
+    document.getElementById(id).classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>

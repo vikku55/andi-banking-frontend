@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Branch Management | Admin Panel</title>
+  <link rel="stylesheet" href="css/branches.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Branch Management</h1>
+
+    <!-- Add Branch Form -->
+    <div class="form-box">
+      <h2>Add New Branch</h2>
+      <form id="branchForm">
+        <input type="text" id="name" placeholder="Branch Name" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="city" placeholder="City">
+        <input type="text" id="state" placeholder="State">
+        <input type="text" id="zip" placeholder="Zip Code">
+        <button type="submit">Add Branch</button>
+      </form>
+    </div>
+
+    <!-- Branch List -->
+    <div class="table-box">
+      <h2>All Branches</h2>
+      <table id="branchesTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Branch Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/branches.js"></script>
+</body>
+</html>

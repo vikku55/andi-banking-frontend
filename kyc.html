@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYC Verification</title>
+  <link rel="stylesheet" href="user-style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>User Panel</h2>
+    <ul>
+      <li class="active"><a href="user-dashboard.html">Dashboard</a></li>
+      <li><a href="deposit.html">E-DEPOSIT</a></li>
+      <li><a href="withdraw.html">E-WITHDRAW</a></li>
+      <li><a href="user-branches.html">OUR BRANCH</a></li>
+      <li><a href="admin-transactions.html">ACCOUNT-STATEMENT</a></li>
+      <li><a href="kyc.html">KYC</a></li>
+      <li><a href="logout1.html">LOGOUT</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content" style="margin-left: 40%;">
+    <header>
+      <h1>KYC Verification</h1>
+    </header>
+
+    <section class="form-section">
+      <form>
+        <label for="user_id" >User Id</label>
+        <input type="text" id="user_id">
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+        <label for="aadhaar">Aadhaar Number</label>
+        <input type="text" id="aadhaar" placeholder="Enter Aadhaar number" required>
+
+        <label for="pan">PAN Number</label>
+        <input type="text" id="pan" placeholder="Enter PAN number" required>
+
+        <label for="document">Upload Document</label>
+        <input type="text" id="document" placeholder="Link Your Document" required>
+
+        <button type="submit">Submit KYC</button>
+      </form>
+    </section>
+  </div>
+  <script src="js/kyc.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Blog</title>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: #009688; /* teal color */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navbar h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.navbar .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  background: #0277bd;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #01579b;
+}
+
+.profile-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Content */
+.content {
+  background: #f0f0f0;
+  min-height: calc(100vh - 50px);
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="left">
+      <span class="menu-icon">☰</span>
+      <h2>All Blog</h2>
+    </div>
+    <div class="right">
+      <button class="btn">+ Add new blog</button>
+      <span class="profile-icon">👤</span>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="content">
+    <div class="card">
+      <p>No data found</p>
+    </div>
+  </main>
+</body>
+</html>
